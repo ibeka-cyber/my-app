@@ -1,13 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import Bilesenim from './bilesenim';
+function XTaneBilesenim(props){
+  let dizi=[]; 
+  for(let i = 0;i<props.xkere;i++){
+    dizi.push(<Bilesenim renk={props.renk}/>)
+  }
+  return dizi;
 
+}
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <XTaneBilesenim xkere="4" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          <Bilesenim/>
         </p>
         <a
           className="App-link"
